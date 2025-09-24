@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController // This annotation indicates that this class is a REST controller
 @RequestMapping("/api/todo") // Base URL for all endpoints in this controller
-@CrossOrigin(origins = "http://localhost:5173") // Allow cross-origin requests from the React app
+@CrossOrigin(origins = "${CLIENT_URL}") // Allow cross-origin requests from the React app
 public class ToDoController {
     
     @Autowired
@@ -22,6 +22,7 @@ public class ToDoController {
 
     @GetMapping
     public List<ToDo> getAllToDos() {
+        System.out.println("GET /api/todo called");
         return toDoService.getAllToDos();
     }
 

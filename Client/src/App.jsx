@@ -1,6 +1,18 @@
 import React from 'react'
+import { useEffect } from 'react';
+
+import API from './lib/Axios'
 
 function App() {
+
+  useEffect(() => async () => {
+    try {
+      const response = await API.get('/todo');
+      console.log('Response data:', response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }, []);
 
   return (
     <>
