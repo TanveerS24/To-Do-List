@@ -4,7 +4,9 @@ function App() {
 
   return (
     <>
-    Vanakkam
+      <div className='bg-red-400'>
+        Vankkam
+      </div>
     </>
   )
 }
