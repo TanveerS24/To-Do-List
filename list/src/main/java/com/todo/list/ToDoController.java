@@ -22,7 +22,7 @@ public class ToDoController {
 
     @GetMapping
     public List<ToDo> getAllToDos() {
-        System.out.println("GET /api/todo called");
+        System.out.println("GET /api/todo");
         return toDoService.getAllToDos();
     }
 
