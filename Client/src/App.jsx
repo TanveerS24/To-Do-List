@@ -5,7 +5,6 @@ import RecordCard from './helpers/RecordCard';
 
 function App() {
 
-  const [time, setTime] = useState(new Date());
   const [record, setRecord] = useState([]);
 
   useEffect(() => {
@@ -23,26 +22,13 @@ function App() {
     fetchData();
   }, [setRecord]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
-      <div>
-        {time.toLocaleTimeString()}
-      </div>
-      <div className='bg-red-400'>
-        Vankkam
-      </div>
-      <div>
-        {record.map(rec  => 
-          <RecordCard key={rec.id} record={rec} />
-        )}
-      </div>
+    <div className='min-h-screen bg-cyan-950 text-4xl top-1.5 flex pt-4 justify-center'>
+      <h1 className='underline decoration-dashed decoration-teal-200 text-5xl text-teal-500'>
+        Welcome
+      </h1>
+    </div>
     </>
   )
 }
