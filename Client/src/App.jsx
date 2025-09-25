@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => async () => {
     try {
-      const response = await API.get('/todo');
+      const response = await API.get();
       console.log('Response data:', response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
