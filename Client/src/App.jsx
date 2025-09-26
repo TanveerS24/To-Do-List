@@ -1,17 +1,18 @@
 import React from "react";
-
-import Footer from "./Components/Footer";
-import Input from "./Components/input"
 import Home from "./Components/Home";
+import Footer from "./Components/Footer";
+import Timer from "./Components/Timer";
 
-const App = (() => {
-  return (
-    <>
-      <Home/>
-      <Input/>
-      <Footer/>
-    </>
-  )
-})
+const App = () => {
+    return (
+        <>
+            <div className="bg-cyan-300 min-h-screen">
+                <Home/>
+                <Timer/>
+            </div>
+            <Footer/>
+        </>
+    )
+};
 
 export default App;

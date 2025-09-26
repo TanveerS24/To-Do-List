@@ -1,20 +1,28 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React from 'react'
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
-const Footer = (() =>{
-    const [time, setTime] = useState(new Date());
-    useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
+const Footer = () => {
+    
   return (
-    <div className="fixed z-10 bottom-2 left-2 bg-transparent font-bold text-amber-50">
-        {time.toLocaleTimeString()}
-    </div>
-  );
-})
+    <>
+        <div className='bg-cyan-800 p-4'>
+            <div className='grid grid-cols-3'>
+                <div className='flex items-center justify-center'>
+                    <FaLinkedin size={30}/>
+                    <a href=""></a>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <FaGithub size={30}/>
+                    <a href=""></a>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <FaInstagram size={30}/>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+    </>
+  )
+}
 
-export default Footer;
+export default Footer
