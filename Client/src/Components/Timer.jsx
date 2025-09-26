@@ -12,7 +12,7 @@ const Timer = () => {
     }, [])
   return (
     <>
-        <div className='absolute bottom-1 left-1 text-black'>
+        <div className='absolute bottom-1 left-1 text-[#006064]'>
             {time.toLocaleTimeString()}
         </div>
     </>

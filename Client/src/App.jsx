@@ -6,7 +6,7 @@ import Timer from "./Components/Timer";
 const App = () => {
     return (
         <>
-            <div className="bg-cyan-300 min-h-screen">
+            <div className="bg-[#E0F7FA] min-h-screen">
                 <Home/>
                 <Timer/>
             </div>
