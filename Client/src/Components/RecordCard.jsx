@@ -3,8 +3,7 @@ import React from 'react'
 const RecordCard = ({record}) => {
   return (
     <div>
-      {record.title}
-      {record.completed.toString()}
+      {record.title} - {record.completed.toString()}
     </div>
   )
 }
