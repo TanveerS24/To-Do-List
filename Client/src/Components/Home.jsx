@@ -11,6 +11,7 @@ const Home = () => {
     console.log(fakeRecords)
     setRecords(fakeRecords);
   },[setRecords])
+  
   return (
     <>
       <div className="flex items-center justify-center pt-6 font-medium text-[#006064] text-5xl 
